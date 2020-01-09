@@ -54,11 +54,94 @@ public class TicTacToeGUI extends javax.swing.JFrame {
         String BotC2 = ButtonC2.getText();
         String BotC3 = ButtonC3.getText();
         
+        //Horizontale Linien prüfung für X
         if(BotA1 == "X" && BotA2 == "X" && BotA3 == "X"){
             ResultatX++;
             LabelWinner.setText("X HAT GEWONNEN!");
             resultat();
         }
+        else if(BotB1 == "X" && BotB2 == "X" && BotB3 == "X"){
+            ResultatX++;
+            LabelWinner.setText("X HAT GEWONNEN!");
+            resultat();
+        }
+        else if(BotC1 == "X" && BotC2 == "X" && BotC3 == "X"){
+            ResultatX++;
+            LabelWinner.setText("X HAT GEWONNEN!");
+            resultat();
+        }
+        //Verticale Linien
+        else if(BotA1 == "X" && BotB1 == "X" && BotC1 == "X"){
+            ResultatX++;
+            LabelWinner.setText("X HAT GEWONNEN!");
+            resultat();
+        }
+        else if(BotA2 == "X" && BotB2 == "X" && BotC2 == "X"){
+            ResultatX++;
+            LabelWinner.setText("X HAT GEWONNEN!");
+            resultat();
+        }
+        else if(BotA3 == "X" && BotB3 == "X" && BotC3 == "X"){
+            ResultatX++;
+            LabelWinner.setText("X HAT GEWONNEN!");
+            resultat();
+        }
+        //Diagonale Linien
+        else if(BotA1 == "X" && BotB2 == "X" && BotC3 == "X"){
+            ResultatX++;
+            LabelWinner.setText("X HAT GEWONNEN!");
+            resultat();
+        }
+        else if(BotA3 == "X" && BotB2 == "X" && BotC1 == "X"){
+            ResultatX++;
+            LabelWinner.setText("X HAT GEWONNEN!");
+            resultat();
+        }
+        
+        //Horizontale Linien prüfung für O
+        if(BotA1 == "O" && BotA2 == "O" && BotA3 == "O"){
+            ResultatO++;
+            LabelWinner.setText("O HAT GEWONNEN!");
+            resultat();
+        }
+        else if(BotB1 == "O" && BotB2 == "O" && BotB3 == "O"){
+            ResultatO++;
+            LabelWinner.setText("O HAT GEWONNEN!");
+            resultat();
+        }
+        else if(BotC1 == "O" && BotC2 == "O" && BotC3 == "O"){
+            ResultatO++;
+            LabelWinner.setText("O HAT GEWONNEN!");
+            resultat();
+        }
+        //Verticale Linien
+        else if(BotA1 == "O" && BotB1 == "O" && BotC1 == "O"){
+            ResultatO++;
+            LabelWinner.setText("O HAT GEWONNEN!");
+            resultat();
+        }
+        else if(BotA2 == "O" && BotB2 == "O" && BotC2 == "O"){
+            ResultatO++;
+            LabelWinner.setText("O HAT GEWONNEN!");
+            resultat();
+        }
+        else if(BotA3 == "O" && BotB3 == "O" && BotC3 == "O"){
+            ResultatO++;
+            LabelWinner.setText("O HAT GEWONNEN!");
+            resultat();
+        }
+        //Diagonale Linien
+        else if(BotA1 == "O" && BotB2 == "O" && BotC3 == "O"){
+            ResultatO++;
+            LabelWinner.setText("O HAT GEWONNEN!");
+            resultat();
+        }
+        else if(BotA3 == "X" && BotB2 == "X" && BotC1 == "X"){
+            ResultatO++;
+            LabelWinner.setText("O HAT GEWONNEN!");
+            resultat();
+        }
+        
     }
     /**
      * This method is called from within the constructor to initialize the form.
