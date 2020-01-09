@@ -170,6 +170,8 @@ public class TicTacToeGUI extends javax.swing.JFrame {
         LabelResultatX = new javax.swing.JLabel();
         LabelResultatO = new javax.swing.JLabel();
         LabelWinner = new javax.swing.JLabel();
+        ButtonResetGame = new javax.swing.JButton();
+        ButtonResetPoints = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tic Tac Toe");
@@ -356,6 +358,22 @@ public class TicTacToeGUI extends javax.swing.JFrame {
         LabelWinner.setForeground(new java.awt.Color(153, 153, 255));
         LabelWinner.setText("PLAY, GOOD LUCK!");
 
+        ButtonResetGame.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
+        ButtonResetGame.setText("Reset game");
+        ButtonResetGame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonResetGameActionPerformed(evt);
+            }
+        });
+
+        ButtonResetPoints.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
+        ButtonResetPoints.setText("Reset points");
+        ButtonResetPoints.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonResetPointsActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -367,9 +385,13 @@ public class TicTacToeGUI extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(gameFläche, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(74, 74, 74)
-                        .addComponent(LabelPointsX)
-                        .addGap(18, 18, 18)
-                        .addComponent(LabelResultatX))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(LabelPointsX)
+                                .addGap(18, 18, 18)
+                                .addComponent(LabelResultatX))
+                            .addComponent(ButtonResetPoints, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ButtonResetGame, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(718, 718, 718)
                         .addComponent(LabelPointsO)
@@ -400,6 +422,10 @@ public class TicTacToeGUI extends javax.swing.JFrame {
                             .addComponent(LabelResultatO))
                         .addGap(52, 52, 52)
                         .addComponent(LabelWinner)
+                        .addGap(49, 49, 49)
+                        .addComponent(ButtonResetGame)
+                        .addGap(49, 49, 49)
+                        .addComponent(ButtonResetPoints)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
@@ -516,6 +542,25 @@ public class TicTacToeGUI extends javax.swing.JFrame {
         gewinnerErmittler();
     }//GEN-LAST:event_ButtonC3ActionPerformed
 
+    private void ButtonResetGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonResetGameActionPerformed
+        ButtonA1.setText(null);
+        ButtonA2.setText(null);
+        ButtonA3.setText(null);
+        ButtonB1.setText(null);
+        ButtonB2.setText(null);
+        ButtonB3.setText(null);
+        ButtonC1.setText(null);
+        ButtonC2.setText(null);
+        ButtonC3.setText(null);
+        LabelWinner.setText("PLAY, GOOD LUCK!");
+    }//GEN-LAST:event_ButtonResetGameActionPerformed
+
+    private void ButtonResetPointsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonResetPointsActionPerformed
+        this.ResultatO = 0;
+        this.ResultatX = 0;
+        resultat();
+    }//GEN-LAST:event_ButtonResetPointsActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -561,6 +606,8 @@ public class TicTacToeGUI extends javax.swing.JFrame {
     private javax.swing.JButton ButtonC1;
     private javax.swing.JButton ButtonC2;
     private javax.swing.JButton ButtonC3;
+    private javax.swing.JButton ButtonResetGame;
+    private javax.swing.JButton ButtonResetPoints;
     private javax.swing.JLabel LabelPointsO;
     private javax.swing.JLabel LabelPointsX;
     private javax.swing.JLabel LabelResultatO;
