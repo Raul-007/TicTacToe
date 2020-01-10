@@ -17,7 +17,8 @@ public class TicTacToeGUI extends javax.swing.JFrame {
     protected String anfang = "X";
     int ResultatO = 0;
     int ResultatX = 0;
-    
+    final static protected Color hellBlau = Color.decode("#6699ff");
+            
     public TicTacToeGUI() {
         initComponents();
         //Hacer que la ventana aparezca en el medio
@@ -38,6 +39,31 @@ public class TicTacToeGUI extends javax.swing.JFrame {
             anfang = "X";
         }
     }
+    //Desactiviert alle knöpfe nachdem jemand gewonnen hat
+    public void desactivateButton(){
+        ButtonA1.setEnabled(false);
+        ButtonA2.setEnabled(false);
+        ButtonA3.setEnabled(false);
+        ButtonB1.setEnabled(false);
+        ButtonB2.setEnabled(false);
+        ButtonB3.setEnabled(false);
+        ButtonC1.setEnabled(false);
+        ButtonC2.setEnabled(false);
+        ButtonC3.setEnabled(false);
+    }
+    
+    //Knöpfe activieren
+    public void activateButton(){
+        ButtonA1.setEnabled(true);
+        ButtonA2.setEnabled(true);
+        ButtonA3.setEnabled(true);
+        ButtonB1.setEnabled(true);
+        ButtonB2.setEnabled(true);
+        ButtonB3.setEnabled(true);
+        ButtonC1.setEnabled(true);
+        ButtonC2.setEnabled(true);
+        ButtonC3.setEnabled(true);
+    }
     
     //Winner wird ermittelt
     public void gewinnerErmittler(){
@@ -57,89 +83,153 @@ public class TicTacToeGUI extends javax.swing.JFrame {
         //Horizontale Linien prüfung für X
         if(BotA1 == "X" && BotA2 == "X" && BotA3 == "X"){
             ResultatX++;
+            ButtonA1.setBackground(Color.GREEN);
+            ButtonA2.setBackground(Color.GREEN);
+            ButtonA3.setBackground(Color.GREEN);
             LabelWinner.setText("X HAT GEWONNEN!");
             resultat();
+            desactivateButton();
         }
         else if(BotB1 == "X" && BotB2 == "X" && BotB3 == "X"){
             ResultatX++;
+            ButtonB1.setBackground(Color.GREEN);
+            ButtonB2.setBackground(Color.GREEN);
+            ButtonB3.setBackground(Color.GREEN);
             LabelWinner.setText("X HAT GEWONNEN!");
             resultat();
+            desactivateButton();
         }
         else if(BotC1 == "X" && BotC2 == "X" && BotC3 == "X"){
             ResultatX++;
+            ButtonC1.setBackground(Color.GREEN);
+            ButtonC2.setBackground(Color.GREEN);
+            ButtonC3.setBackground(Color.GREEN);
             LabelWinner.setText("X HAT GEWONNEN!");
             resultat();
+            desactivateButton();
         }
         //Verticale Linien
         else if(BotA1 == "X" && BotB1 == "X" && BotC1 == "X"){
             ResultatX++;
+            ButtonA1.setBackground(Color.GREEN);
+            ButtonB1.setBackground(Color.GREEN);
+            ButtonC1.setBackground(Color.GREEN);
             LabelWinner.setText("X HAT GEWONNEN!");
             resultat();
+            desactivateButton();
         }
         else if(BotA2 == "X" && BotB2 == "X" && BotC2 == "X"){
             ResultatX++;
+            ButtonA2.setBackground(Color.GREEN);
+            ButtonB2.setBackground(Color.GREEN);
+            ButtonC2.setBackground(Color.GREEN);
             LabelWinner.setText("X HAT GEWONNEN!");
             resultat();
+            desactivateButton();
         }
         else if(BotA3 == "X" && BotB3 == "X" && BotC3 == "X"){
             ResultatX++;
+            ButtonA3.setBackground(Color.GREEN);
+            ButtonB3.setBackground(Color.GREEN);
+            ButtonC3.setBackground(Color.GREEN);
             LabelWinner.setText("X HAT GEWONNEN!");
             resultat();
+            desactivateButton();
         }
         //Diagonale Linien
         else if(BotA1 == "X" && BotB2 == "X" && BotC3 == "X"){
             ResultatX++;
+            ButtonA1.setBackground(Color.GREEN);
+            ButtonB2.setBackground(Color.GREEN);
+            ButtonC3.setBackground(Color.GREEN);
             LabelWinner.setText("X HAT GEWONNEN!");
             resultat();
+            desactivateButton();
         }
         else if(BotA3 == "X" && BotB2 == "X" && BotC1 == "X"){
             ResultatX++;
+            ButtonA3.setBackground(Color.GREEN);
+            ButtonB2.setBackground(Color.GREEN);
+            ButtonC1.setBackground(Color.GREEN);
             LabelWinner.setText("X HAT GEWONNEN!");
             resultat();
+            desactivateButton();
         }
         
         //Horizontale Linien prüfung für O
         if(BotA1 == "O" && BotA2 == "O" && BotA3 == "O"){
             ResultatO++;
+            ButtonA1.setBackground(Color.GREEN);
+            ButtonA2.setBackground(Color.GREEN);
+            ButtonA3.setBackground(Color.GREEN);
             LabelWinner.setText("O HAT GEWONNEN!");
             resultat();
+            desactivateButton();
         }
         else if(BotB1 == "O" && BotB2 == "O" && BotB3 == "O"){
             ResultatO++;
+            ButtonB1.setBackground(Color.GREEN);
+            ButtonB2.setBackground(Color.GREEN);
+            ButtonB3.setBackground(Color.GREEN);
             LabelWinner.setText("O HAT GEWONNEN!");
             resultat();
+            desactivateButton();
         }
         else if(BotC1 == "O" && BotC2 == "O" && BotC3 == "O"){
             ResultatO++;
+            ButtonC1.setBackground(Color.GREEN);
+            ButtonC2.setBackground(Color.GREEN);
+            ButtonC3.setBackground(Color.GREEN);
             LabelWinner.setText("O HAT GEWONNEN!");
             resultat();
+            desactivateButton();
         }
         //Verticale Linien
         else if(BotA1 == "O" && BotB1 == "O" && BotC1 == "O"){
             ResultatO++;
+            ButtonA1.setBackground(Color.GREEN);
+            ButtonB1.setBackground(Color.GREEN);
+            ButtonC1.setBackground(Color.GREEN);
             LabelWinner.setText("O HAT GEWONNEN!");
             resultat();
+            desactivateButton();
         }
         else if(BotA2 == "O" && BotB2 == "O" && BotC2 == "O"){
             ResultatO++;
+            ButtonA2.setBackground(Color.GREEN);
+            ButtonB2.setBackground(Color.GREEN);
+            ButtonC2.setBackground(Color.GREEN);
             LabelWinner.setText("O HAT GEWONNEN!");
             resultat();
+            desactivateButton();
         }
         else if(BotA3 == "O" && BotB3 == "O" && BotC3 == "O"){
             ResultatO++;
+            ButtonA3.setBackground(Color.GREEN);
+            ButtonB3.setBackground(Color.GREEN);
+            ButtonC3.setBackground(Color.GREEN);
             LabelWinner.setText("O HAT GEWONNEN!");
             resultat();
+            desactivateButton();
         }
         //Diagonale Linien
         else if(BotA1 == "O" && BotB2 == "O" && BotC3 == "O"){
             ResultatO++;
+            ButtonA1.setBackground(Color.GREEN);
+            ButtonB2.setBackground(Color.GREEN);
+            ButtonC3.setBackground(Color.GREEN);
             LabelWinner.setText("O HAT GEWONNEN!");
             resultat();
+            desactivateButton();
         }
-        else if(BotA3 == "X" && BotB2 == "X" && BotC1 == "X"){
+        else if(BotA3 == "O" && BotB2 == "O" && BotC1 == "O"){
             ResultatO++;
+            ButtonA3.setBackground(Color.GREEN);
+            ButtonB2.setBackground(Color.GREEN);
+            ButtonC1.setBackground(Color.GREEN);
             LabelWinner.setText("O HAT GEWONNEN!");
             resultat();
+            desactivateButton();
         }
         
     }
@@ -319,12 +409,13 @@ public class TicTacToeGUI extends javax.swing.JFrame {
             gameFlächeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(gameFlächeLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addGroup(gameFlächeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ButtonA2, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ButtonA1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(gameFlächeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(gameFlächeLayout.createSequentialGroup()
                         .addGap(2, 2, 2)
-                        .addComponent(ButtonA3, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(ButtonA3, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(gameFlächeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(ButtonA2, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ButtonA1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(gameFlächeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ButtonB2, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -543,6 +634,20 @@ public class TicTacToeGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonC3ActionPerformed
 
     private void ButtonResetGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonResetGameActionPerformed
+        activateButton();
+        //Macht nochmal button color back
+        ButtonA1.setBackground(hellBlau);
+        ButtonA1.setBackground(hellBlau);
+        ButtonA2.setBackground(hellBlau);
+        ButtonA3.setBackground(hellBlau);
+        ButtonB1.setBackground(hellBlau);
+        ButtonB2.setBackground(hellBlau);
+        ButtonB3.setBackground(hellBlau);
+        ButtonC1.setBackground(hellBlau);
+        ButtonC2.setBackground(hellBlau);
+        ButtonC3.setBackground(hellBlau);
+        
+        //Macht inhalt nochmal null
         ButtonA1.setText(null);
         ButtonA2.setText(null);
         ButtonA3.setText(null);
